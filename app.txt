@@ -1,0 +1,40 @@
+$(document).ready(function () {
+    var min = 0, max = 4;
+    $.each($(".something").children(), function (index, value) {
+        if (index >= min && index <= max) {
+            $(this).removeClass("sr");
+        } else {
+            $(this).addClass("sr");
+        }
+    });
+
+})
+
+/* function currentSlide(productId, min=0, max=4) {
+    min = min + 1, max = max + 1;
+    $.each($('.' + productId).children(), function (index) {
+        if (index >= min && index <= max) {
+            $(this).removeClass("sr");
+        } else {
+            $(this).addClass("sr");
+        }
+    });
+    $('.hiii').empty().append("<span class='hi' onclick=currentSlide('" + productId + "'," + min + "," + max + ")>click</span>");
+} */
+
+// function currentSlide(productId, min = 0, max = 4) {
+//     if (max < $('.' + productId).children().length-1) {
+//         min = min + 1, max = max + 1;
+//         $.each($('.' + productId).children(), function (index) {
+//             if (index >= min && index <= max) {
+//                 $(this).removeClass("sr");
+//             } else {
+//                 $(this).addClass("sr");
+//             }
+//         });
+//         $('.something').next().empty().append("<span class='hi' onclick=currentSlide('" + productId + "'," + min + "," + max + ")>click</span>");
+//     } else {
+//         currentSlide(productId);
+//     }
+
+// } 
